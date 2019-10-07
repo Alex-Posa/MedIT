@@ -1,0 +1,32 @@
+table {
+    width: 50%;
+    table-layout: auto;
+    border-collapse: collapse;
+    font-style: sans-serif;
+}
+
+#table_head {
+    
+    background-color: black;
+    color: white;
+}
+
+th,td {
+    border: 1px;
+    border-color: white;
+}
+
+.odd {
+    background-color: #EEE;
+    
+}
+
+
+.even {
+    background-color: white;
+    
+}
+
+p {
+    font-style: italic;
+}
