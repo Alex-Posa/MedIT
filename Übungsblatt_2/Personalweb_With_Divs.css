@@ -1,0 +1,46 @@
+@font-face{
+    
+    src: url(../fonts/roboto-condensed-light_[allfont.net]);
+    font-family: 'Roboto Condensed Light', arial;
+}
+
+#header {
+    
+    background-color: #c2185b;
+    color: white;
+}
+
+
+#hobbies {
+    
+    float: left;
+    width: 45%;
+}
+
+#about_me {
+    float: left;
+    width: 45%;
+}
+
+#footer {
+    
+    background-color: #c2185b;
+    color: white;
+    clear: both;
+}
+
+img {
+    
+    border-radius: 25px;
+    border: 2px;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+a:hover{
+    
+    color: yellowgreen;
+    
+}
