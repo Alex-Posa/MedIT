@@ -34,7 +34,13 @@ function translate(inputText) {
 
 var translatedText = inputText;
 var seperatedText = translatedText.split(" ");
- 
 
+// for function with length of seperatedText
+	// if (isVocal) or 
+	// if (isConsonant)
+
+	
+// return seperated_translated_text + vocal/consonant + ay/yay
+	
 return translatedText;
 }
