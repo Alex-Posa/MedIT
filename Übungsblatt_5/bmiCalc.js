@@ -1,7 +1,6 @@
 function initBMICalculator() {
     
     var inputFieldWeight = document.getElementById("input_field_weight").addEventListener("keyup", calculate);
-	//input_field_height.addEventListener("keyup", calculate);
 }
 
 
@@ -24,19 +23,34 @@ function getHeight(){
 
 function calculate(){
 	
-	//var height = getHeight();
-	//var weight = getWeight();
+	var height = getHeight();
+	var weight = getWeight();
 	
-	//var calculation = weight/(height*height);
-	
-	updateResultContainer(11);
+	var calculation = weight/((height*height)/10000);
+	var cal = calculation.toFixed(2);
+	updateResultContainer(cal);
 }
 
-function updateResultContainer(calculation){
-	var bmiResult = document.getElementById("bmi_result_container");
-	bmiResult.innerHTML = calculation;
+function updateResultContainer(cal){
+	var bmiResult = document.getElementById("bmi_result_value");
+	bmiResult.innerHTML = cal;
 	
 	var result_text = document.getElementById("bmi_result_text");
-	//result_text_ref.innerHTML = "Hallo";
-
+	
+	if(bmiResult.innerHTML < 18.5){
+		result_text.innerHTML = "Untergewicht";
+		document.getElementById("bmi_result_text").style.color = "yellow";
+	}
+	if(bmiResult.innerHTML >= 18.5 && bmiResult.innerHTML < 25){
+		result_text.innerHTML = "Normalgewicht";
+		document.getElementById("bmi_result_text").style.color = "green";
+	}
+	if(bmiResult.innerHTML > 25){
+		result_text.innerHTML = "Übergewicht";
+		document.getElementById("bmi_result_text").style.color = "red";
+	}
+	if(bmiResult.innerHTML > 50 || bmiResult.innerHTML < 1){
+		result_text.innerHTML = "Super ungesundes Gewicht!";
+		document.getElementById("bmi_result_text").style.color = "pink";
+	}
 }
